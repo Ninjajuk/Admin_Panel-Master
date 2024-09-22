@@ -1,9 +1,13 @@
+'use client'
 import React, { useState } from "react";
+import Sidebar from "../sidebar/Sidebar2";
+import NavHeader from "../header/Header";
 
 
 
-const DefaultLayout = ({ children }) => {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+const DefaultLayout = ({ children }:any) => {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState<boolean>(false);
+
 
   const handleMobileMenu = () => {
     setMobileMenuOpen(!mobileMenuOpen);
@@ -15,16 +19,15 @@ const DefaultLayout = ({ children }) => {
       <div className="flex w-full h-screen overflow-hidden">
         {/* <!-- ===== Sidebar Start ===== --> */}
 
-        <SidebarMenu
-          mobileMenuOpen={mobileMenuOpen}
-          setMobileMenuOpen={setMobileMenuOpen}
-        />
+        <Sidebar
+        mobileMenuOpen={mobileMenuOpen}
+        setMobileMenuOpen={setMobileMenuOpen} />
         {/* <!-- ===== Sidebar End ===== --> */}
 
         {/* <!-- ===== Content Area Start ===== --> */}
         <div className="relative flex flex-1 flex-col overflow-y-auto overflow-x-hidden">
           {/* <!-- ===== Header Start ===== --> */}
-          <Header
+          <NavHeader
             mobileMenuOpen={mobileMenuOpen}
             setMobileMenuOpen={setMobileMenuOpen}
           />
