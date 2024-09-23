@@ -93,7 +93,7 @@ const Sidebar = ({ mobileMenuOpen, setMobileMenuOpen }:any) => {
   );
 
   return (
-    <div className="w-64 h-screen bg-gray-50    flex flex-col">
+    <div className="hidden lg:flex flex-col  w-64 h-screen bg-gray-50    ">
       <div className="w-full h-[4rem] bg-green-500  sticky ">
         <div
           // onClick={() => setOpen(!open)}
@@ -103,7 +103,7 @@ const Sidebar = ({ mobileMenuOpen, setMobileMenuOpen }:any) => {
             <BiHome className="h-6 w-6 text-primary" />
           </span>
           <h1
-            className={`whitespace-pre duration-500 text-2xl font-bold text-primary ${!open && "opacity-0 translate-x-28 overflow-hidden"
+            className={`whitespace-pre duration-500 text-2xl font-bold text-primary ${!openMenu && "opacity-0 translate-x-28 overflow-hidden"
               }`}
           >
             Teghiya

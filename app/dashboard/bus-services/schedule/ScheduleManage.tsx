@@ -1,7 +1,9 @@
+'use client'
 import React, { useState } from "react";
-import MyTable from "../../../../components/common/MyTable";
+
 import { MdUploadFile } from "react-icons/md";
-import Papa from "papaparse"; // Add this import for CSV parsing
+import Papa from "papaparse"; 
+import MyTable from "@/app/components/common/MyTable";
 
 const ScheduleManagement = () => {
   const schedule = [
@@ -133,7 +135,7 @@ const ScheduleManagement = () => {
     },
   ];
 
-  const scheduleRow = [
+  const scheduleRow:Array<any> = [
     "busName",
     "route",
     "day",
@@ -145,10 +147,10 @@ const ScheduleManagement = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [csvData, setCsvData] = useState([]);
 
-  const handleFileUpload = (event) => {
+  const handleFileUpload = (event:any) => {
     const file = event.target.files[0];
     Papa.parse(file, {
-      complete: (result) => {
+      complete: (result:any) => {
         setCsvData(result.data);
         setIsModalOpen(true);
       },
@@ -163,8 +165,8 @@ const ScheduleManagement = () => {
   };
 
   return (
-    <div className="w-full h-full flex flex-col p-2 lg:p-4 gap-1 lg:gap-2">
-      <header className="flex flex-col lg:flex-row  gap-1  lg:justify-between items-center  w-full h-1/6  px-1 lg:px-4 py-1  bg-teal-400 rounded-md shadow-md">
+    <div className="w-full flex flex-col p-2 lg:p-4 gap-1 lg:gap-2" style={{height:'calc(100vh - 4rem)'}}>
+      <header className="w-full lg:h-1/6 flex flex-col lg:flex-row  gap-1  lg:justify-between items-center   px-1 lg:px-4 py-1  bg-gray-50 rounded-md shadow-md">
         <h1 className="text-md lg:text-2xl font-bold ">Schedule Management</h1>
         <div className="flex item-center gap-1 lg:gap-2 text-xs lg:text-base">
           <button className="bg-primary text-white px-1 lg:px-4 py-1 lg:py-2 rounded">
@@ -172,7 +174,7 @@ const ScheduleManagement = () => {
           </button>
           <button
             className="bg-green-500 text-white px-4 py-1 lg:py-2 rounded "
-            onClick={() => handleScheduleCreation("automated")}
+            // onClick={() => handleScheduleCreation("automated")}
           >
             Automated Schedule
           </button>
@@ -190,16 +192,17 @@ const ScheduleManagement = () => {
           </label>
         </div>
       </header>
-      <div className=" h-5/6 p-4 bg-gray-100 rounded-md shadow-md ">
+      <div className="w-full h-5/6 p-4 bg-gray-50 rounded-md shadow-md ">
         <MyTable
           headerCol={scheduleRow}
           row={schedule}
           showEdit={true}
           showDelete={false}
+          handleDelete={()=>{}}
         />
       </div>
 
-      {isModalOpen && (
+      {/* {isModalOpen && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center">
           <div className="bg-white p-6 rounded-lg w-3/4 h-3/4  overflow-auto overflow-y-auto">
             <h2 className="text-2xl font-bold mb-4">CSV Preview</h2>
@@ -226,7 +229,7 @@ const ScheduleManagement = () => {
             </div>
           </div>
         </div>
-      )}
+      )} */}
     </div>
   );
 };

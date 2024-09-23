@@ -1,6 +1,7 @@
+'use client'
 import React, { useState } from "react";
 import { FaPenAlt } from "react-icons/fa";
-function BusDetails({ bus }) {
+function BusDetails({ bus }:any) {
   const [isEditing, setIsEditing] = useState(false);
 
   const handleEdit = () => {
@@ -24,13 +25,13 @@ function BusDetails({ bus }) {
   //Seat Layout
   const [seats, setSeats] = useState([]);
 
-  const addRow = (row) => {
-    setSeats([...seats, row]);
-  };
+  // const addRow = (row) => {
+  //   setSeats([...seats, row]);
+  // };
 
-  const handleSave = () => {
-    saveLayout(seats);
-  };
+  // const handleSave = () => {
+  //   saveLayout(seats);
+  // };
 
   return (
     <div className="p-4 flex flex-col gap-1 lg:gap-2 h-full ">
@@ -57,7 +58,7 @@ function BusDetails({ bus }) {
         <div>
           <button
             className="bg-gray-500 text-white px-4 py-2 rounded hover:ring-2 ring-primary "
-            onClick={() => window.history.back()}
+            // onClick={() => window.history.back()}
           >
             Search
           </button>
@@ -256,7 +257,7 @@ function BusDetails({ bus }) {
               </tr>
             </thead>
             <tbody>
-              {bus.assignmentHistory.map((history) => (
+              {bus.assignmentHistory.map((history:any) => (
                 <tr key={history.routeName} className="border-b">
                   <td className="p-2">{history.routeName}</td>
                   <td className="p-2">{history.startDate}</td>

@@ -1,12 +1,13 @@
 import DefaultLayout from "@/app/components/common/DefaultLayout"
-import RouteManagement from "../route/RouteManagement"
+
+import ScheduleManagement from "./ScheduleManage"
 
 
 
 const ScheduleManageMent = () =>{
     return(
         <DefaultLayout>
-            <RouteManagement />
+            <ScheduleManagement />
         </DefaultLayout>
     )
 }

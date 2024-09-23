@@ -1,5 +1,6 @@
 
 'use client'
+import MyTable from "@/app/components/common/MyTable";
 import React, { useEffect, useState } from "react";
 import { MdFileDownload, MdFilterList } from "react-icons/md";
 
@@ -61,6 +62,7 @@ function RouteManagement() {
       end: "Varanasi",
       distance: 254,
     },
+    
     {
       name: "Royal Rajasthan",
       start: "Jaipur",
@@ -70,7 +72,8 @@ function RouteManagement() {
   ];
   const [routes, setRoutes] = useState(parsedRoute);
 
-  const columnTable = ["name", "start", "end", "distance"];
+  const columnTable: Array<"name" | "start" | "end" | "distance"> = ["name", "start", "end", "distance"];
+
 
     // Handle edit route logic
   // const handleEdit = (id) => {
@@ -166,7 +169,7 @@ function RouteManagement() {
       </div>
 
       <div className="h-5/6 p-4 bg-gray-100 rounded-md shadow-md">
-        {/* <MyTable headerCol={columnTable} row={routes} action={false} /> */}
+        <MyTable headerCol={columnTable} row={routes} action={false} handleDelete={()=>{}} />
       </div>
 
       {/* {isDeleting && showModal && (
