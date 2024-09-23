@@ -1,12 +1,13 @@
 import DefaultLayout from "@/app/components/common/DefaultLayout"
-import RouteManagement from "./RouteManagement"
+import RouteManagement from "../route/RouteManagement"
 
 
-const RouteManageMent = () =>{
+
+const BusDetail = () =>{
     return(
         <DefaultLayout>
-        <RouteManagement/>
+            <RouteManagement />
         </DefaultLayout>
     )
 }
-export default RouteManageMent
+export default BusDetail

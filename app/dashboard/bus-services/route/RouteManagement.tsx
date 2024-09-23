@@ -72,15 +72,17 @@ function RouteManagement() {
 
   const columnTable = ["name", "start", "end", "distance"];
 
-  const handleEdit = (id) => {
     // Handle edit route logic
-  };
+  // const handleEdit = (id) => {
 
-  const handleDelete = (id) => {
+  // };
+
     // Handle delete route logic here
-    setShowModal(true);
-    setIsDeleting(true);
-  };
+  // const handleDelete = (id) => {
+  //   setShowModal(true);
+  //   setIsDeleting(true);
+  // };
+
   const [isDeleting, setIsDeleting] = useState(false);
   const [showModal, setShowModal] = useState(false);
   const [addRoute, setAddRoute] = useState(false);
@@ -107,7 +109,7 @@ function RouteManagement() {
 
   return (
     <div className="w-full h-full flex flex-col p-2 lg:p-4 gap-1 lg:gap-2">
-      <div className="w-full lg:h-1/6 flex flex-col gap-1 px-1 lg:px-4 py-1  bg-teal-400 rounded-md shadow-md">
+      <div className="w-full lg:h-1/6 flex flex-col gap-1 px-1 lg:px-4 py-1  bg-gray-100 rounded-md shadow-md">
         <header className="w-full flex justify-between items-center px-2 ">
           <h1
             // onClick={() => toast.success("Success")}
