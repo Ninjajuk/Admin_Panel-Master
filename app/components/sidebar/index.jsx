@@ -18,8 +18,7 @@ import {
 
 } from "react-icons/fa";
 import { BiHome } from "react-icons/bi";
-import Sideba2 from "./Sidebar2";
-import Sidebar2 from "./Sidebar2";
+
 
 const SidebarMenu = ({ mobileMenuOpen, setMobileMenuOpen }) => {
   const menus = [
@@ -44,25 +43,18 @@ const SidebarMenu = ({ mobileMenuOpen, setMobileMenuOpen }) => {
       ],
     },
     { name: "Teghiya Store", link: "/admin/ecom", icon: FiShoppingCart },
-    { name: "Yingkiong Store", link: "/admin/ecom", icon: FiShoppingCart },
     { name: "Gausiya Tyres", link: "/admin/gausiya-tyres", icon: MdFolderOpen },
     { name: "Catering", link: "/admin/catering", icon: MdRestaurant },
-    { name: "Pandals", link: "/admin/catering", icon: MdOutlineStarOutline },
-    { name: "Expense Tracker", link: "/admin/catering", icon: MdAttachMoney },
-    { name: "Next ias app", link: "/admin/catering", icon: MdAttachMoney },
+
+
     { name: "Customer", link: "/admin/customers", icon: AiOutlineUser },
     { name: "analytics", link: "/", icon: TbReportAnalytics },
     { name: "File Manager", link: "/", icon: FiFolder },
-    // { name: "Cart", link: "/", icon: FiShoppingCart },
-    { name: "Saved", link: "/", icon: AiOutlineHeart, margin: true },
+
     { name: "User", link: "/admin/user", icon: AiOutlineUserAdd },
-    { name: "Setting", link: "/", icon: RiSettings4Line },
+
   ];
-  const userNavigation = [
-    { name: "Your Profile", href: "#" },
-    { name: "Settings", href: "#" },
-    { name: "Sign out", href: "#" },
-  ];
+
   function classNames(...classes) {
     return classes.filter(Boolean).join(" ");
   }
@@ -98,7 +90,7 @@ const SidebarMenu = ({ mobileMenuOpen, setMobileMenuOpen }) => {
             </div>
 
             <div
-              className={`flex-grow h-0 px-4 bg-gray-50 inline-block  overflow-y-auto`}
+              className={`flex-grow h-0 px-4 bg-gray-50 inline-block  `}
             >
               <div className=" flex flex-col gap-4  ">
                 {menus?.map((menu, i) => (
@@ -189,7 +181,7 @@ const SidebarMenu = ({ mobileMenuOpen, setMobileMenuOpen }) => {
                 <h1 className="ml-2 text-lg font-bold text-primary">Teghiya</h1>
               </div>
 
-              <div className="mt-5 flex-1 h-0 overflow-y-auto">
+              <div className="mt-5 flex-1 h-0 ">
                 <nav className="px-4 space-y-1">
                   {menus.map((menu, i) => (
                     <NavLink

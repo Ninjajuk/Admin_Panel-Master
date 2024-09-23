@@ -1,12 +1,9 @@
-import React, { useEffect, useState } from "react";
-import { DeleteModal } from "../../../../components/modal/DeleteModal";
-import { FaPen, FaTrash } from "react-icons/fa";
-import AddRoute from "../../../components/FormDash/AddRoute";
-import MyTable from "../../../../components/common/MyTable";
 
+'use client'
+import React, { useEffect, useState } from "react";
 import { MdFileDownload, MdFilterList } from "react-icons/md";
-import LoaderCircle from "../../../../components/common/Loader";
-import { toast, ToastContainer } from "react-toastify";
+
+
 
 function RouteManagement() {
   const parsedRoute = [
@@ -113,13 +110,13 @@ function RouteManagement() {
       <div className="w-full lg:h-1/6 flex flex-col gap-1 px-1 lg:px-4 py-1  bg-teal-400 rounded-md shadow-md">
         <header className="w-full flex justify-between items-center px-2 ">
           <h1
-            onClick={() => toast.success("Success")}
+            // onClick={() => toast.success("Success")}
             className="text-sm lg:text-xl font-bold truncate"
           >
             Route Management
           </h1>
           <button
-            onClick={() => setAddRoute(!addRoute)}
+            // onClick={() => setAddRoute(!addRoute)}
             className="bg-primary text-white px-4 py-1 rounded truncate hover:transform hover:scale-105"
           >
             Add New Route
@@ -127,7 +124,7 @@ function RouteManagement() {
         </header>
         <div className="flex items-center justify-between gap-2 px-4 py-2">
           <div
-            onClick={() => toast.success("Success")}
+            // onClick={() => toast.success("Success")}
             className="cursor-pointer"
           >
             Click ME
@@ -167,13 +164,13 @@ function RouteManagement() {
       </div>
 
       <div className="h-5/6 p-4 bg-gray-100 rounded-md shadow-md">
-        <MyTable headerCol={columnTable} row={routes} action={false} />
+        {/* <MyTable headerCol={columnTable} row={routes} action={false} /> */}
       </div>
 
-      {isDeleting && showModal && (
+      {/* {isDeleting && showModal && (
         <DeleteModal
           closeModal={() => setShowModal(!showModal)}
-          // onDelete={onDelete}
+          onDelete={onDelete}
           handleDelete={handleDelete}
           title={"Delete Route"}
           message={
@@ -184,10 +181,10 @@ function RouteManagement() {
           toastType={"success"}
           toastMessage={"Deleted successfully!"}
         />
-      )}
-      {addRoute && <AddRoute handleClose={handleClose} routes={routes} />}
+      )} */}
+      {/* {addRoute && <AddRoute handleClose={handleClose} routes={routes} />} */}
       {/* Pagination would go here */}
-      <ToastContainer />
+      {/* <ToastContainer /> */}
     </div>
   );
 }

@@ -94,7 +94,7 @@ const Sidebar = ({ mobileMenuOpen, setMobileMenuOpen }:any) => {
 
   return (
     <div className="w-64 h-screen bg-gray-50    flex flex-col">
-      <div className="w-full h-[4rem] bg-green-500  sticky top-0">
+      <div className="w-full h-[4rem] bg-green-500  sticky ">
         <div
           // onClick={() => setOpen(!open)}
           className="w-full h-full px-6 flex items-center text-sm gap-3.5 font-medium   cursor-pointer"
