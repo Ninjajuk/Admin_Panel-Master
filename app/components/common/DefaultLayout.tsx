@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import Sidebar from "../sidebar/Sidebar2";
 import NavHeader from "../header/Header";
+import SidebarMenu from "../sidebar/Sidebar2";
 
 
 
@@ -18,11 +19,14 @@ const DefaultLayout = ({ children }:any) => {
       {/* <!-- ===== Page Wrapper Start ===== --> */}
       <div className="flex w-full h-screen overflow-hidden">
         {/* <!-- ===== Sidebar Start ===== --> */}
-
+{/* 
         <Sidebar
         mobileMenuOpen={mobileMenuOpen}
+        setMobileMenuOpen={setMobileMenuOpen} /> */}
+               <SidebarMenu
+        mobileMenuOpen={mobileMenuOpen}
         setMobileMenuOpen={setMobileMenuOpen} />
-        {/* <!-- ===== Sidebar End ===== --> */}
+        {/* <!-- ===== Sidebar End ===== -->SidebarMenu */}
 
         {/* <!-- ===== Content Area Start ===== --> */}
         <div className="relative flex flex-1 flex-col overflow-y-auto overflow-x-hidden">
